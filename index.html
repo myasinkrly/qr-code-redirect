@@ -26,10 +26,12 @@
             else if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
                 window.location.href = "https://apps.apple.com/app/id123456789"; // iOS için App Store linki
             }
-            // Diğer cihazlar için yönlendirme
-            else {
-                window.location.href = "https://www.kursoftaydinlatma.com/qr-404"; // Varsayılan bir URL, örneğin bir web sitesine
-            }
+            // Diğer cihazlar için yönlendirme (QR-404 sayfasına yönlendirme)
+else {
+    setTimeout(function() {
+        window.location.href = "https://www.kursoftaydinlatma.com/qr-404"; 
+    }, 100); // 100 milisaniye bekleyerek yönlendirme yap
+}
         })();
     </script>
 </body>

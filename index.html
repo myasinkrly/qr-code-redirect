@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QR Yönlendirmesi - Android ve iOS cihazlar için otomatik yönlendirme.">
+    <meta name="keywords" content="QR, yönlendirme, Android, iOS, web sitesi, mobil uygulama">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="QR Yönlendirmesi">
+    <meta property="og:description" content="Android ve iOS cihazlar için otomatik yönlendirme.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://static.wixstatic.com/media/95cf8c_22dfb9fbe5f14ff3bd8d846dde6521a1~mv2.png/v1/fill/w_244,h_244,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/kursoftfavicon3.png">
+    <title>QR Yönlendirmesi</title>
+</head>
+<body>
+    <script>
+        (function() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Android cihazı tespit etme
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.example.app"; // Android için Play Store linki
+            }
+            // iOS cihazı tespit etme
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/app/id123456789"; // iOS için App Store linki
+            }
+            // Diğer cihazlar için yönlendirme
+            else {
+                window.location.href = "https://kursoftaydinlatma.com"; // Varsayılan bir URL, örneğin bir web sitesine
+            }
+        })();
+    </script>
+</body>
+</html>
